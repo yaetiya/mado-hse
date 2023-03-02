@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "12993883815",
+    "project_id": "mado-a33a3",
+    "storage_bucket": "mado-a33a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12993883815:android:e556ea517001392db97582",
+        "android_client_info": {
+          "package_name": "com.mado.madoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "12993883815-cdcahi450445ori7lh820klv1jflkf5o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHr8iqDrwA-kMvd6nzMZuHV3sv-kE2a3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "12993883815-cdcahi450445ori7lh820klv1jflkf5o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "12993883815-4lo8hb0cfhnasfbc2hf3j5bsnambtd93.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mado.madoapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

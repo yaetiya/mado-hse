@@ -1,0 +1,52 @@
+version: '3.6'
+
+services:
+  portainer:
+    image: portainer/portainer:latest
+    ports:
+      - 9000:9000
+    command: --admin-password 'XXX'
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer-data:/data
+
+  mongodb:
+    image: mongo:4.4
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin-user
+      MONGO_INITDB_ROOT_PASSWORD: XXX
+      DB_NAME: mado
+      DB_USER: user
+      DB_PASSWORD: XXX
+    ports:
+      - 27019:27017
+    command:
+      - '--logpath'
+      - '/var/log/mongodb/mongod.log'
+    volumes:
+      - db-data:/data/db
+      - ./init-mongo.sh:/docker-entrypoint-initdb.d/init-mongo.sh
+  web-landing:
+    image: mado-web
+    ports:
+      - 4173:4173
+    restart: always # this is where your process can be guaranteed to restart
+  mado-backend:
+    image: mado-backend
+    ports:
+      - 4731:4731
+    environment:
+      MONGO_CLIENT_URI: mongodb://user:XXX@mongodb:27017/mado?authSource=mado
+      MODE: prod
+      PORT: 4731
+      DO_SUB_DIR: prod
+      TG_CHANNEL_ID: -1001561315654
+      BOT_TOKEN: XXX
+    depends_on:
+      - mongodb
+    restart: always # this is where your process can be guaranteed to restart
+
+volumes:
+  db-data:
+  portainer-data:
