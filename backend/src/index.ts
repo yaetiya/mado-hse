@@ -4,9 +4,9 @@ import db from './db'
 import {FastifyInstance} from 'fastify'
 import {JwtAuthHandlerInputT} from './handlers/userHandlers'
 import {balancesService} from './balances/service'
+import {registerFastifies} from "./gateway/endpoints"
 import {User, UserModelT, UserRoles} from './auth/models/user'
 import handleNftTxsService from './nftFeed/foundationApp/handleNftTxsService'
-import {registerFastifies} from "./gateway/endpoints";
 
 export const fastify: FastifyInstance = require('fastify')({
     logger: true,
