@@ -23,7 +23,7 @@ import cmsHandlers, { CreateSocialNetworkInputT, createSocialNetworkSchema, Empt
 import { User, UserModelT, UserRoles } from './auth/models/user'
 import projectsHandlers, { CreateProjectInputT, createProjectSchema, getProjectSchema } from './handlers/projectsHandlers'
 import featureConfigHandler from './handlers/featureConfigHandler'
-import handleNftTxsService from './nftFeed/foundationApp/handleNftTxsService'
+import handleNftTxsService from './nftFeed/tsxHandler'
 import nftFeedHandler, { AddOrRemoveEmojiInputT, addOrRemoveEmojiSchema, getCurrentCollectionCountSchema, GetFeedElementsInputT, getFeedElementsSchema } from './handlers/nftFeedHandler'
 
 // fastify.register(import('fastify-raw-body'), {
