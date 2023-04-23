@@ -11,7 +11,7 @@ import userHandlers, {
     SignUpHandlerInputT,
     signUpSchema,
     unlockUserSchema
-} from '../handlers/userHandlers'
+} from '../user/userHandlers'
 import contentGeneratorHandler, {
     ContentGeneratorHandlerInputT,
     contentGeneratorSchema,
@@ -23,27 +23,27 @@ import contentGeneratorHandler, {
     LocaleBasedInputT,
     onCourseCompletedInputT,
     onCourseCompletedSchema
-} from '../handlers/coursesHandler'
-import balancesHandler, {GetBalancesHandlerInputT, getBalancesSchema} from '../handlers/balancesHandler'
+} from '../courses/coursesHandler'
+import balancesHandler, {GetBalancesHandlerInputT, getBalancesSchema} from '../balances/balancesHandler'
 import cmsHandlers, {
     CreateSocialNetworkInputT,
     createSocialNetworkSchema,
     EmptyInputT,
     getSocialNetworksSchema
-} from '../handlers/cmsHandlers'
+} from '../cms/cmsHandlers'
 import projectsHandlers, {
     CreateProjectInputT,
     createProjectSchema,
     getProjectSchema
-} from '../handlers/projectsHandlers'
-import featureConfigHandler from '../handlers/featureConfigHandler'
+} from '../projects/projectsHandlers'
+import featureConfigHandler from './featureConfigHandler'
 import nftFeedHandler, {
     AddOrRemoveEmojiInputT,
     addOrRemoveEmojiSchema,
     getCurrentCollectionCountSchema,
     GetFeedElementsInputT,
     getFeedElementsSchema
-} from '../handlers/nftFeedHandler'
+} from '../nftFeed/nftFeedHandler'
 
 export function registerFastifies(fastify: FastifyInstance) {
     const authSchema = schema => ({

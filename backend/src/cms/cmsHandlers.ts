@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest, FastifySchema } from 'fastify'
-import { SocialNetwork, SocialNetworkSwaggerModel } from '../cms/models/socialNetworkModel'
+import { SocialNetwork, SocialNetworkSwaggerModel } from './models/socialNetworkModel'
 
 export type EmptyInputT = {
 }

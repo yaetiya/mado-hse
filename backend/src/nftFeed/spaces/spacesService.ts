@@ -1,8 +1,8 @@
-import { configuration } from "../config/configuration";
+import { configuration } from "../../config/configuration";
 import AWS from "aws-sdk";
 import { Body } from "aws-sdk/clients/s3";
-import strTools from "../tools/strTools";
-import { EMediaTypes } from "../nftFeed/feedDistributors/models";
+import strTools from "../../tools/strTools";
+import { EMediaTypes } from "../feedDistributors/models";
 const spacesEndpoint = new AWS.Endpoint(configuration.doSpace.endpoint);
 const s3 = new AWS.S3({
     endpoint: spacesEndpoint,

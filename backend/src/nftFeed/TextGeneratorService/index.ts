@@ -1,6 +1,6 @@
 import { prices } from "../../balances/service";
 import { ELocales } from "../../courses/models/course";
-import { INftMetadataWithIds } from "../../spaces/nftMetadataStoringService";
+import { INftMetadataWithIds } from "../spaces/nftMetadataStoringService";
 import { EEventTypes, INftEvent } from "../nftFeedService";
 
 class TextGeneratorService {

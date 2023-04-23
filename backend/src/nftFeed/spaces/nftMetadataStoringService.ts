@@ -1,10 +1,10 @@
 import axios from "axios";
 import { Types } from "mongoose";
 import sharp from "sharp";
-import { configuration } from "../config/configuration";
-import { EMediaTypes } from "../nftFeed/feedDistributors/models";
-import { alchemy } from "../tools/alchemy";
-import strTools from "../tools/strTools";
+import { configuration } from "../../config/configuration";
+import { EMediaTypes } from "../feedDistributors/models";
+import { alchemy } from "../../tools/alchemy";
+import strTools from "../../tools/strTools";
 import { INftCollectionMetadataStorage, INftTokenStorage, NftCollectionMetadataStorage, NftTokenStorage } from "./nftStorageModels";
 import spacesService from "./spacesService";
 

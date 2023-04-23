@@ -1,13 +1,13 @@
 import { FastifyReply, FastifyRequest, FastifySchema } from 'fastify'
 import mongoose from 'mongoose'
 import { ELocales } from '../courses/models/course'
-import { localeService } from '../locale/localeService'
-import { EAllowedEmoji, Emoji } from '../nftFeed/Emoji/EmojiModel'
-import EmojiService from '../nftFeed/Emoji/EmojiService'
-import MobileAppFeedService from '../nftFeed/MobileAppFeed/MobileAppFeedService'
-import TextGeneratorService from '../nftFeed/TextGeneratorService'
-import { EmptyInputT } from './cmsHandlers'
-import { JwtAuthHandlerInputT } from './userHandlers'
+import { localeService } from '../courses/locale/localeService'
+import { EAllowedEmoji, Emoji } from './Emoji/EmojiModel'
+import EmojiService from './Emoji/EmojiService'
+import MobileAppFeedService from './MobileAppFeed/MobileAppFeedService'
+import TextGeneratorService from './TextGeneratorService'
+import { EmptyInputT } from '../cms/cmsHandlers'
+import { JwtAuthHandlerInputT } from '../user/userHandlers'
 
 export type GetFeedElementsInputT = {
     Querystring: {

@@ -1,7 +1,7 @@
 import { FastifyReply, FastifyRequest, FastifySchema } from 'fastify'
-import { User, UserModelT, UserSwaggerModel } from '../auth/models/user'
+import { User, UserModelT, UserSwaggerModel } from '../user/models/user'
 import { JwtPayload, UsersAuthService } from '../auth/services/users-auth.service'
-import { balancesService } from '../balances/service'
+import { balancesService } from './service'
 import { ethWeb3 } from '../tools/useWeb3'
 
 export type GetBalancesHandlerInputT = {

@@ -2,10 +2,10 @@ require('dotenv').config()
 import {configuration} from './config/configuration'
 import db from './db'
 import {FastifyInstance} from 'fastify'
-import {JwtAuthHandlerInputT} from './handlers/userHandlers'
+import {JwtAuthHandlerInputT} from './user/userHandlers'
 import {balancesService} from './balances/service'
 import {registerFastifies} from "./gateway/endpoints"
-import {User, UserModelT, UserRoles} from './auth/models/user'
+import {User, UserModelT, UserRoles} from './user/models/user'
 import handleNftTxsService from './nftFeed/foundationApp/handleNftTxsService'
 
 export const fastify: FastifyInstance = require('fastify')({

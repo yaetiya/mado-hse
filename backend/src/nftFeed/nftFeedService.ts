@@ -1,5 +1,5 @@
 import axios from "axios";
-import nftMetadataStoringService from "../spaces/nftMetadataStoringService";
+import nftMetadataStoringService from "./spaces/nftMetadataStoringService";
 import strTools from "../tools/strTools";
 import feedDistributors from "./feedDistributors";
 import { EMediaTypes } from "./feedDistributors/models";

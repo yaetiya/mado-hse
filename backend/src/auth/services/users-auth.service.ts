@@ -1,6 +1,6 @@
 import mongoose, { Model } from 'mongoose'
 import { ethWeb3 } from '../../tools/useWeb3'
-import { IUser, User, UserAuthProvider, UserModelT, UserPlatforms, UserRoles } from '../models/user'
+import { IUser, User, UserAuthProvider, UserModelT, UserPlatforms, UserRoles } from '../../user/models/user'
 import { bufferToHex, ecrecover, isValidSignature, pubToAddress, toBuffer } from 'ethereumjs-util'
 import { fastify } from '../..'
 

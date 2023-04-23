@@ -1,4 +1,4 @@
-import { ELocales } from "../courses/models/course"
+import { ELocales } from "../models/course"
 
 export const localeService = {
     getLocale: (locale) => {

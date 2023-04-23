@@ -1,5 +1,5 @@
 require('dotenv').config()
-import nftMetadataStoringService from "../../src/spaces/nftMetadataStoringService"
+import nftMetadataStoringService from "../../src/nftFeed/spaces/nftMetadataStoringService"
 
 
 describe.skip('Get nft metadata', () => {

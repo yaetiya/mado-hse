@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest, FastifySchema } from 'fastify'
-import { User, UserModelT, UserPlatforms, UserSwaggerModel } from '../auth/models/user'
+import { User, UserModelT, UserPlatforms, UserSwaggerModel } from './models/user'
 import { JwtPayload, UsersAuthService } from '../auth/services/users-auth.service'
 import { ethWeb3 } from '../tools/useWeb3'
 

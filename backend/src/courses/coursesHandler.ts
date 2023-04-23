@@ -1,11 +1,11 @@
 import { FastifyReply, FastifyRequest, FastifySchema } from 'fastify'
 import mongoose from 'mongoose'
-import { User } from '../auth/models/user'
-import { Course, CourseModelT, CoursePopulatedSwaggerModel, CourseSwaggerModel, ELocales, ICourse, IPart, Part, PartModelT } from '../courses/models/course'
-import { notionToHtml } from '../courses/models/notionToHtml'
-import { localeService } from '../locale/localeService'
+import { User } from '../user/models/user'
+import { Course, CourseModelT, CoursePopulatedSwaggerModel, CourseSwaggerModel, ELocales, ICourse, IPart, Part, PartModelT } from './models/course'
+import { notionToHtml } from './models/notionToHtml'
+import { localeService } from './locale/localeService'
 import strTools from '../tools/strTools'
-import { JwtAuthHandlerInputT } from './userHandlers'
+import { JwtAuthHandlerInputT } from '../user/userHandlers'
 
 export type ContentGeneratorHandlerInputT = {
     Body: {

@@ -1,5 +1,5 @@
 import mongoose, { model, Mongoose, Schema } from 'mongoose'
-import { INftCollectionMetadataStorage, INftTokenStorage } from '../../spaces/nftStorageModels'
+import { INftCollectionMetadataStorage, INftTokenStorage } from '../spaces/nftStorageModels'
 import { EEventTypes, INftEvent } from '../nftFeedService'
 import { Types } from 'mongoose';
 
