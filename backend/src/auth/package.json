@@ -1,0 +1,45 @@
+{
+  "name": "mado-backend-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "d-build": "docker build -t mado-backend-auth .",
+    "d-run": "docker run --rm -it -p 4732:4732 -d mado-backend-auth",
+    "prebuild": "tsc -b",
+    "test": "DOTENV_CONFIG_PATH=.env mocha -r ts-node/register --timeout 10000 tests/**/*.spec.ts",
+    "start": "fastify start services/users-auth.service.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/jwt": "^6.3.2",
+    "@fastify/swagger": "^7.4.1",
+    "axios": "^0.26.1",
+    "fastify": "^3.29.0",
+    "fastify-cors": "^6.1.0",
+    "fastify-jwt": "^4.2.0",
+    "fastify-swagger": "^5.2.0",
+    "google-auth-library": "^8.1.1",
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2",
+    "web3": "^1.7.3"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 160
+  },
+  "devDependencies": {
+    "@types/bitcore-lib": "^0.15.3",
+    "@types/chai": "^4.3.3",
+    "@types/express": "^4.17.13",
+    "@types/mocha": "^9.1.1",
+    "@types/node-telegram-bot-api": "^0.57.1",
+    "@types/sharp": "^0.30.5",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
